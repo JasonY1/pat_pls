@@ -66,4 +66,3 @@ end
 gem 'devise', '3.4.1'
 gem 'cancan', '~> 1.6'
 gem 'paperclip', '~> 4.2'
-gem 'rails_12factor'
