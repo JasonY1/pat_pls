@@ -30,6 +30,7 @@ ActiveAdmin.register Product do
       f.input :available
       f.input :ontap
     end
+    f.actions
   end
 
 end
