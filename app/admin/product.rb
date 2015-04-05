@@ -25,7 +25,7 @@ ActiveAdmin.register Product do
       f.input :style
       f.input :image_url
       f.input :brewer
-      f.input :tapdate
+      f.input :tapdate, as: :datepicker
       f.input :abv
       f.input :available
       f.input :ontap
