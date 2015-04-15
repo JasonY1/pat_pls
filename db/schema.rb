@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405073630) do
+ActiveRecord::Schema.define(version: 20150405191704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,16 +61,16 @@ ActiveRecord::Schema.define(version: 20150405073630) do
     t.decimal  "price"
     t.decimal  "special_price"
     t.datetime "special_date"
-    t.decimal  "abv"
-    t.boolean  "ontap"
-    t.datetime "tapdate"
     t.boolean  "available"
     t.string   "image_url"
-    t.string   "brewer"
     t.string   "style"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "category_id"
+    t.string   "image_url_file_name"
+    t.string   "image_url_content_type"
+    t.integer  "image_url_file_size"
+    t.datetime "image_url_updated_at"
   end
 
 end

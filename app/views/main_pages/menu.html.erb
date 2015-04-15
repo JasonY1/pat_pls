@@ -1,0 +1,26 @@
+<h1>Menu</h1>
+<div class="something">
+  <% @categories.each do |category| %>
+    <div class="col-sm-12">
+      <% if !category.products.any? do %>
+        <h2><%= category.name %></h2>
+            <% category.products.each do |product| %>
+          <div class="col-sm-4">
+            <%= product.name %><br>
+            <%= product.description %><br>
+            <% if product.special_date == Date.today.wday %>
+              <%= product.special_price %><br>
+            <% else %>
+              <%= product.price %><br>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+  
+</div>
+<%= link_to "ABOUT", main_pages_about_path, class:"btn btn-primary btn-lg" %>
+<a href="#" class="btn btn-primary btn-lg">Home</a>
+<a href="#about" class="btn btn-success btn-lg">About</a>

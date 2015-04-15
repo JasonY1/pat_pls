@@ -14,21 +14,26 @@ ActiveAdmin.register Product do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+
+  # THIS SHOULD SHOW ALL DETAILS AND FRONT-END PREVIEW
+  # show do
+    # h3 product.name
+  # end
+
+
+
   form do |f|
     f.inputs do
-      f.input :category_id, as: :select, collection: Category.all.map{ |c| c.name }
+      f.input :category do
+        input :category_id, as: :select, collection: Category.all.map{ |c| c.name }
+      end
       f.input :name
       f.input :description
       f.input :price
       f.input :special_price
       f.input :special_date, as: :select, collection: Date::DAYNAMES
       f.input :style
-      f.input :image_url
-      f.input :brewer
-      f.input :tapdate, as: :datepicker
-      f.input :abv
       f.input :available
-      f.input :ontap
     end
     f.actions
   end

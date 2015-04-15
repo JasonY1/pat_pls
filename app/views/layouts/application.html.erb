@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mySPA">
 <head>
   <title>Soho</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -7,8 +7,76 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-inner navbar-center">
+          <a class="">
+            <%= link_to image_tag('http://placehold.it/150x150'), root_path, id: 'logo', class: 'img-respoonsive' %>
+          </a>
+        </div>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><%= link_to "Menu", main_pages_menu_path %></li>
+          <li><%= link_to "About", main_pages_about_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  <div class="container" ng-app="animateApp">
+    <%= yield %>
+  </div>
+  
+  
+  
+  
+  
+  
+  <footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="container">
 
-<%= yield %>
-
+        <div class="col-md-4 col-sm-4">
+          <address>
+            <strong>Contact Us</strong>
+            <br>
+            4633 Convoy St #102
+            <br>
+            San Diego, CA 92111
+            <br>
+            <strong title="Phone"> Phone:</strong> (858) 499-8999
+          </address>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <strong>Hours</strong>
+          </br>
+          Monday - Closed
+          </br>
+          Tuesday, Wednesday, Sunday: 5 PM - 12 AM
+          </br>
+          Thursday, Friday, Saturday: 5 PM - 2AM
+        </div>
+        
+        <div class="col-md-4 col-sm-4">
+          <ul class="socialmeds">
+          <%= link_to image_tag('facebookicon.png'),   "https://www.facebook.com/NolbuSD", id: "facebook" %>
+          <!-- <%= link_to image_tag('twittericon.png'),   "http://www.facebook.com", id: "twitter" %> -->
+          <%= link_to image_tag('yelpicon.png'),   "http://www.yelp.com/biz/nolbu-mini-gastropub-san-diego", id: "yelp" %>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
