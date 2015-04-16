@@ -1,5 +1,28 @@
-<div class="page {{ pageClass }}" ng-view></div>>
-<h1>MainPages#home</h1>
-<p>Find me in app/views/main_pages/home.html.erb</p>
-<a href="#about" class="btn btn-success btn-lg">About</a>
-<a href="#menu" class="btn btn-danger btn-lg">Menu</a>
+<div class="homePage" ng-view></div>
+
+<div class="fill">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag 'http://placehold.it/1024x700' %>
+      </div>
+      <div class="item">
+        <%= image_tag 'http://placehold.it/1024x700' %>
+      </div>
+      <div class="item">
+        <%= image_tag 'http://placehold.it/1024x700' %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pull-center">
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+  </div>
+</div>
