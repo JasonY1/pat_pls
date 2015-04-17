@@ -1,0 +1,72 @@
+@mixin bgborder {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 9px;
+  border-color: blue;
+}
+
+#nav-id.cnavbar {
+  font-size: 20px;
+  height: 75px;
+  width: auto;
+  .navbar-nav > {
+    li > a {
+      color: rgba(230, 64, 64, 1);
+      background-color: rgba(248, 248, 248, 0);
+      &:hover, &:focus {
+        color: rgba(51, 51, 51, 1);
+        background-color: rgba(242, 0, 0, 1);
+      }
+      @include bgborder;
+    }
+    .active > a {
+      color: rgba(85, 85, 85, 1);
+      background-color: rgba(70, 219, 83, 1);
+      &:hover, &:focus {
+        color: rgba(85, 85, 85, 1);
+        background-color: rgba(70, 219, 83, 1);
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: #46db53;
+    &:hover, &:focus, .icon-bar {
+      background-color: #46db53;
+    }
+    &:hover .icon-bar, &:focus .icon-bar {
+      background-color: #ffffff;
+    }
+  }
+  .navbutton {
+    @include bgborder;
+    .leftnav {
+      padding-left: 5%;
+      li {
+        width: 120px;
+      }
+    }
+    .rightnav {
+      padding-right: 5%;
+      li {
+        width: 120px;
+      }
+    }
+  }
+  
+  .navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    margin-top: -15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbutton {
+    .leftnav {
+      padding-left: 15%
+    }
+  }
+}

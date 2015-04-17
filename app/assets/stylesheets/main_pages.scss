@@ -2,31 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar-brand {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  margin: auto;
-  margin-top: -15px;
-}
 
-.navbar {
-  height: 75px
+.homePage {
+  padding-top: 500px;
 }
 
 .pagecontent {
-  padding-top: 500px;
   border-style: solid;
   border-width: 5px;
 }
 
 .fill {
   width: 100%;
-}
-
-// NAVBAR 
-
-.navbar {
-  opacity: 1;
 }
