@@ -39,14 +39,15 @@
   }
   .navbutton {
     @include bgborder;
+    text-align: center;
     .leftnav {
-      padding-left: 5%;
+      padding-left: 6%;
       li {
         width: 120px;
       }
     }
     .rightnav {
-      padding-right: 5%;
+      padding-right: 6%;
       li {
         width: 120px;
       }
@@ -63,10 +64,24 @@
   }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .navbutton {
     .leftnav {
-      padding-left: 15%
+      padding-left: 16% !important
+    }
+    .rightnav {
+      padding-right: 16% !important
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbutton {
+    .leftnav {
+      padding-left: 22% !important
+    }
+    .rightnav {
+      padding-right: 22% !important
     }
   }
 }
