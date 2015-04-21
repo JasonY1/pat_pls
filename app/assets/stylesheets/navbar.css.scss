@@ -11,16 +11,17 @@
   width: auto;
   .navbar-nav > {
     li > a {
+      @include bgborder;
       color: black;
       background-color: rgba(248, 248, 248, 0);
       &:hover, &:focus {
-      -webkit-animation: glow 1s infinite alternate;
+        -webkit-animation: glow .7s infinite alternate;
+        @-webkit-keyframes glow {
+          to {
+            color: red
+          }
+        }
       }
-    @-webkit-keyframes glow {
-      to {
-        color: red;
-      }
-      @include bgborder;
     }
     .active > a {
       background-color: rgba(70, 219, 83, 1);
@@ -42,7 +43,6 @@
   .navbutton {
     @include bgborder;
     text-align: center;
-  }
     .leftnav {
       padding-left: 6%;
       li {
