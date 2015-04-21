@@ -18,7 +18,8 @@
         -webkit-animation: glow .7s infinite alternate;
         @-webkit-keyframes glow {
           to {
-            color: red
+            color: red;
+            text-shadow: 0 0 10px black;
           }
         }
       }
@@ -73,10 +74,10 @@
 @media screen and (min-width: 992px) {
   .navbutton {
     .leftnav {
-      padding-left: 16% !important
+      padding-left: 16% !important;
     }
     .rightnav {
-      padding-right: 16% !important
+      padding-right: 16% !important;
     }
   }
 }
@@ -84,10 +85,10 @@
 @media screen and (min-width: 1200px) {
   .navbutton {
     .leftnav {
-      padding-left: 22% !important
+      padding-left: 22% !important;
     }
     .rightnav {
-      padding-right: 22% !important
+      padding-right: 22% !important;
     }
   }
 }
