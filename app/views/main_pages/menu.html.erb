@@ -1,12 +1,12 @@
 <div class="container">
   <h1>Menu</h1>
-  <div class="something">
+  <div class="menuitem">
     <% @categories.each do |category| %>
       <div class="col-sm-12">
         <% if !category.products.any? do %>
           <h2><%= category.name %></h2>
               <% category.products.each do |product| %>
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-md-3">
               <%= product.name %><br>
               <%= product.description %><br>
               <% if product.special_date == Date.today.wday %>

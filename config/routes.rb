@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+
+  # Main Pages
   root 'main_pages#home'
-
   get 'main_pages/menu'
-
   get 'main_pages/about'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
