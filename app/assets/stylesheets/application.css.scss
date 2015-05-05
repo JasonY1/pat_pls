@@ -16,3 +16,12 @@
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+.fullscreen {
+  background: url("backgroundimg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}

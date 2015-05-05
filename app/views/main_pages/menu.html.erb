@@ -7,8 +7,12 @@
           <h2><%= category.name %></h2>
               <% category.products.each do |product| %>
             <div class="col-sm-4 col-md-3">
-              <%= product.name %><br>
+              <div class="menuname">
+              <%= product.name %>
+              </div>
+              <div class="menudesc">
               <%= product.description %><br>
+              </div>
               <% if product.special_date == Date.today.wday %>
                 <%= product.special_price %><br>
               <% else %>
