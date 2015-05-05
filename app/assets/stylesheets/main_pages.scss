@@ -27,17 +27,33 @@
   width: 100%;
 }
 
-// MENU PAGE
-
 .carousel .item {
     width: 100% !important; /*slider width*/
 }
 .carousel .item img {
-    width: 100% !important; /*img width*/
-   overflow-y: visible;
+  width: 100% !important; /*img width*/
+  overflow-y: visible;
 }
 /*add some makeup*/
 .carousel .carousel-control {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
+}
+
+// MENU PAGE
+
+.menu {
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
+
+.menuitem {
+  background-color: red;
+  border-radius: 5px;
+}
+
+.submenu {
+  background-color: grey;
+  margin-bottom: 15px;
 }

@@ -1,28 +1,28 @@
-<div class="container">
+<div class="container menu">
   <h1>Menu</h1>
-  <div class="menuitem">
-    <% @categories.each do |category| %>
-      <div class="col-sm-12">
-        <% if !category.products.any? do %>
-          <h2><%= category.name %></h2>
-              <% category.products.each do |product| %>
-            <div class="col-sm-4 col-md-3">
-              <div class="menuname">
+  <% @categories.each do |category| %>
+    <div class="col-sm-12 menuitem">
+      <% if !category.products.any? do %>
+        <h2><%= category.name %></h2>
+      <% category.products.each do |product| %>
+        <div class="col-sm-4 col-md-3 submenu">
+          <div class="menuname">
               <%= product.name %>
               </div>
-              <div class="menudesc">
+          <div class="menudesc">
               <%= product.description %><br>
               </div>
-              <% if product.special_date == Date.today.wday %>
-                <%= product.special_price %><br>
-              <% else %>
-                <%= product.price %><br>
-              <% end %>
-            <% end %>
-          <% end %>
+          <div class="menuprice">
+                <% if product.special_date == Date.today.wday %>
+                  <%= product.special_price %><br>
+                <% else %>
+                  <%= product.price %><br>
+                <% end %>
+              </div>
         </div>
-      </div>
+      <% end %>
+      <% end %>
+      <% end %>
+    </div>
     <% end %>
-    <% end %>
-  </div>
 </div>
