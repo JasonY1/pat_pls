@@ -1,3 +1,4 @@
+// NAVBAR
 
 #nav-id {
   font-size: 20px;
@@ -49,17 +50,16 @@
       }
     }
   }
-  
+
   .navbar-brand {
     position: absolute;
     width: 100%;
     left: 0;
     text-align: center;
     margin: auto;
-    margin-top: -15px;
+    margin-top: -16px;
   }
 }
-
 
 // MEDIA QUERIES
 
@@ -85,3 +85,12 @@
   }
 }
 
+// FOOTER
+
+.footitem {
+  text-align: center;
+  padding-top: 15px;
+}
+.socialmeds {
+  padding-top: 15px;
+}
