@@ -1,7 +1,10 @@
 ActiveAdmin.register Product do
-  permit_params :name, :description, :price, :special_price, :special_date, :abv,
-               :tapdate, :available, :ontap, :image_url, :brewer, :style, :category_id
+  permit_params :name, :description, :price, :special_price, :special_date, 
+                :available, :category_id
 
+  config.sort_order = 'category_id_asc'
+  config.paginate   = false
+  
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -19,7 +22,16 @@ ActiveAdmin.register Product do
   # show do
     # h3 product.name
   # end
-
+  index do
+    sortable_handle_column
+    column "Category" do |e|
+      e.category.id
+    end
+    column :name
+    column :description #truncate
+    column :price
+    actions
+  end
 
 
   form do |f|
@@ -32,8 +44,6 @@ ActiveAdmin.register Product do
       f.input :price
       f.input :special_price
       f.input :special_date, as: :select, collection: Date::DAYNAMES
-      f.input :style
-      f.input :available
     end
     f.actions
   end

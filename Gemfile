@@ -16,6 +16,9 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # ACTIVE ADMIN
 gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin-sortable', '0.0.3'
+gem 'acts_as_list', '0.7.2'
+gem 'mongoid_orderable', '4.1.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

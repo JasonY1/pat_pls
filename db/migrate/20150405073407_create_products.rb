@@ -6,9 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :price
       t.decimal :special_price
       t.datetime :special_date
-      t.boolean :available
-      t.string :image_url
-      t.string :style
+      t.integer :position
 
       t.timestamps null: false
     end
