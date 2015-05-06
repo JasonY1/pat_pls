@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   # Main Pages
   root 'main_pages#home'
-  get 'main_pages/menu'
-  get 'main_pages/about'
+  get 'menu' => 'main_pages#menu'
+  get 'about' => 'main_pagesabout'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

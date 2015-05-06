@@ -3,7 +3,7 @@ class MainPagesController < ApplicationController
   end
 
   def menu
-    @product = Product.all
+    @products = Product.all
     @categories = Category.all
   end
 
