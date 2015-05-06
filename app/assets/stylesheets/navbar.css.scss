@@ -1,17 +1,10 @@
-@mixin bgborder {
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 9px;
-  border-color: white;
-}
 
-#nav-id.cnavbar {
+#nav-id {
   font-size: 20px;
-  height: 75px;
   width: auto;
+  min-height: 75px;
   .navbar-nav > {
     li > a {
-      @include bgborder;
       color: black;
       background-color: rgba(248, 248, 248, 0);
       &:hover, &:focus {
@@ -33,16 +26,15 @@
     }
   }
   .navbar-toggle {
-    border-color: #46db53;
+    border-color: black;
     &:hover, &:focus, .icon-bar {
-      background-color: #46db53;
+      background-color: #aaa;
     }
     &:hover .icon-bar, &:focus .icon-bar {
-      background-color: #ffffff;
+      background-color: #aaa;
     }
   }
   .navbutton {
-    @include bgborder;
     text-align: center;
     .leftnav {
       padding-left: 6%;

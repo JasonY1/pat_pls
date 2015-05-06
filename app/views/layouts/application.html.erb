@@ -3,50 +3,19 @@
 <head>
   <title>Soho</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-  <%= render '/shared/navbar'%>
-  
+  <%= render '/shared/navbar' %>
+
   <div class="pagecontent fullscreen">
     <%= yield %>
   </div>
-  
-  <footer>
-    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-      <div class="container">
 
-        <div class="col-md-4 col-sm-4">
-          <address>
-            <strong>Contact Us</strong>
-            <br>
-            4633 Convoy St #102
-            <br>
-            San Diego, CA 92111
-            <br>
-            <strong title="Phone"> Phone:</strong> (858) 499-8999
-          </address>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <strong>Hours</strong>
-          </br>
-          Monday - Closed
-          </br>
-          Tuesday, Wednesday, Sunday: 5 PM - 12 AM
-          </br>
-          Thursday, Friday, Saturday: 5 PM - 2AM
-        </div>
-        
-        <div class="col-md-4 col-sm-4">
-          <ul class="socialmeds">
-          <%= link_to image_tag('facebookicon.png'),   "https://www.facebook.com/NolbuSD", id: "facebook" %>
-          <!-- <%= link_to image_tag('twittericon.png'),   "http://www.facebook.com", id: "twitter" %> -->
-          <%= link_to image_tag('yelpicon.png'),   "http://www.yelp.com/biz/nolbu-mini-gastropub-san-diego", id: "yelp" %>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <%= render '/shared/footer'%>
 </body>
 </html>

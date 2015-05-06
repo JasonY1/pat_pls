@@ -1,17 +1,18 @@
-<div id="nav-id" class="cnavbar navbar navbar-static-top" role="navigation">
+<div class="navbar" id="nav-id" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" data-toggle="collapse" 
-              data-target=".navbar-collapse" type="button" >
+    <div class="navbar-header" style="text-align: center">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand">
-          <%= link_to image_tag('http://placehold.it/150x150'), root_path, id: 'logo', class: 'img-respoonsive' %>
+        <%= link_to image_tag('http://placehold.it/150x150'), root_path, id: 'logo', class: 'img-respoonsive' %>
       </div>
     </div>
-    <div class="navbar-collapse collapse navbutton">
+
+    <div class="collapse navbar-collapse navbutton">
       <ul class="nav navbar-nav pull-left leftnav">
         <li><%= link_to "Word", '#' %></li>
         <li><%= link_to "Connect", '#' %></li>

@@ -3,7 +3,7 @@
   <% @categories.each do |category| %>
     <div class="col-sm-12 menuitem">
       <% if !category.products.any? do %>
-        <h2><%= category.name %></h2>
+        <h2 class="title"><%= category.name %></h2>
       <% category.products.each do |product| %>
         <div class="col-sm-4 col-md-3 submenu">
           <div class="menuname">

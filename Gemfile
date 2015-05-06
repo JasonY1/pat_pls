@@ -10,8 +10,9 @@ gem 'rails', '4.2.0'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3'
+gem 'sass-rails', '~> 5.0'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # ACTIVE ADMIN
 gem 'activeadmin', github: 'activeadmin'
